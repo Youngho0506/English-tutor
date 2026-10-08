@@ -1,83 +1,83 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="ko">
-<머리>
- <meta charset=>UTF-8">
- <meta 이름="viewport" 콘텐츠="width=장치 폭, 초기 스케일=1.0, 최대 스케일=1.0, 사용자 scalable=no">
- <meta 이름="theme 컬러" 콘텐츠="#1a73e8">
- <meta 이름="애플-모바일 웹 앱 지원" 콘텐츠="예">
- <meta 이름="애플-모바일-웹앱-상태-바 스타일" 콘텐츠="블랙-transl 반투명">
- <title>친절한 시니어 영어 선생님</title>
-  <스타일.>
- 루트 {
- --primary: #1a73e8;
- --기본 hover: #1557b0;
- --bg: #f8f9fa;
- --card-bg: #ffffff;
- --텍스트-메인: #202124;
- --text-sub: #5f6368;
- --경계: #dadce0;
- --반경: 16 px;
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#1a73e8">
+  <title>친절한 시니어 영어 선생님</title>
+  <style>
+    :root {
+      --primary: #1a73e8;
+      --primary-hover: #1557b0;
+      --bg: #f8f9fa;
+      --card-bg: #ffffff;
+      --text-main: #202124;
+      --text-sub: #5f6368;
+      --border: #dadce0;
+      --radius: 16px;
+      --error: #d93025;
+      --success: #188038;
     }
 
- * {
- 박스 sizing: 테두리 박스;
- 여백: 0;
- 패딩: 0;
- -웹킷 탭 highlight 색상: 투명;
- }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
 
- 몸 {
- 폰트 패밀리: -Apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif;
- 배경색: var(--bg);
- 색상: var(--text-main);
- 선 높이: 1.6;
- 패딩 하의: 60 px;
- }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding-bottom: 60px;
+    }
 
- 헤더 {
- 배경색: #fffffff;
- 경계 바닥: 1 px 고체 var(--경계);
- 패딩: 16 px 20 px;
- 디스플레이: 플렉스;
- 정당화 내용: 공간 간;
- 정렬 items: 중심;
- 포지션: 끈적임;
- 상단: 0;
- z-지수: 10;
- }
+    header {
+      background-color: #ffffff;
+      border-bottom: 1px solid var(--border);
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
 
- 헤더 h1 {
- 글꼴 크기: 22 px;
- 색상: var(--기본);
- 디스플레이: 플렉스;
- 정렬 items: 중심;
- 갭: 8 px;
- }
+    header h1 {
+      font-size: 21px;
+      color: var(--primary);
+    }
 
- .btn-settings {
- 배경: 없음;
- 경계: 1 px 고체 var(--경계);
- 패딩: 8 px 14 px;
- 국경 radius: 20 px;
- 글꼴 크기: 14 px;
- 커서: 포인터;
- 색상: var(--text-sub);
- }
+    .btn-settings {
+      background: #f1f3f4;
+      border: 1px solid var(--border);
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--text-main);
+    }
 
- 메인 {
- 최대 너비: 680 px;
+    main {
+      max-width: 680px;
       margin: 0 auto;
       padding: 20px 16px;
     }
 
-    .notice-card {
-      background-color: #e8f0fe;
-      border-left: 4px solid var(--primary);
+    .banner-warning {
+      background-color: #fce8e6;
+      border: 2px solid var(--error);
+      color: #c5221f;
       padding: 14px 16px;
-      border-radius: 8px;
-      font-size: 15px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
       margin-bottom: 16px;
-      line-height: 1.5;
+      display: none;
     }
 
     .input-card {
@@ -90,17 +90,14 @@
     }
 
     .input-title {
-      font-size: 18px;
+      font-size: 19px;
       font-weight: 700;
       margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
     }
 
     textarea {
       width: 100%;
-      height: 110px;
+      height: 100px;
       padding: 14px;
       font-size: 18px;
       border: 2px solid var(--border);
@@ -122,27 +119,28 @@
     }
 
     .btn {
- 디스플레이: 플렉스;
- 정렬 items: 중심;
- 정당화 내용: 중심;
- 갭: 8 px;
- 패딩: 16 px;
- 글꼴 크기: 18 px;
- 글꼴 무게: 700;
- 국경 radius: 14 px;
- 커서: 포인터;
- 경계: 없음;
- 전환: 모든 0.2초;
- }
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 16px;
+      font-size: 18px;
+      font-weight: 700;
+      border-radius: 14px;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+    }
 
- .btn-기본 {
- 배경색: var(--기본);
- color: #ffffff;
- 그리드 열: 스팬 2;
- }
+    .btn-primary {
+      background-color: var(--primary);
+      color: #ffffff;
+      grid-column: span 2;
+    }
 
-    .btn-primary:active {
-      background-color: var(--primary-hover);
+    .btn-primary:disabled {
+      background-color: #9aa0a6;
+      cursor: not-allowed;
     }
 
     .btn-secondary {
@@ -151,22 +149,28 @@
       border: 1px solid #d2e3fc;
     }
 
-    .btn-secondary:active {
-      background-color: #d2e3fc;
-    }
-
-    .image-preview-container {
+    .image-preview-box {
       margin-top: 14px;
       display: none;
+      background: #f1f3f4;
+      border-radius: 12px;
+      padding: 12px;
       position: relative;
+      text-align: center;
     }
 
     .image-preview {
-      width: 100%;
-      max-height: 220px;
-      object-fit: cover;
-      border-radius: 10px;
-      border: 1px solid var(--border);
+      max-width: 100%;
+      max-height: 240px;
+      border-radius: 8px;
+      object-fit: contain;
+    }
+
+    .preview-info {
+      font-size: 14px;
+      color: var(--success);
+      font-weight: bold;
+      margin-top: 8px;
     }
 
     .btn-remove-image {
@@ -189,16 +193,16 @@
       padding: 30px 10px;
       background: white;
       border-radius: var(--radius);
-      border: 1px solid var(--border);
+      border: 2px solid var(--primary);
       margin-bottom: 24px;
     }
 
     .spinner {
-      border: 4px solid #f3f3f3;
-      border-top: 4px solid var(--primary);
+      border: 5px solid #f3f3f3;
+      border-top: 5px solid var(--primary);
       border-radius: 50%;
-      width: 44px;
-      height: 44px;
+      width: 48px;
+      height: 48px;
       animation: spin 1s linear infinite;
       margin: 0 auto 16px;
     }
@@ -209,15 +213,15 @@
     }
 
     .loading-text {
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 700;
-      color: var(--text-main);
+      color: var(--primary);
     }
 
     .loading-subtext {
       font-size: 15px;
       color: var(--text-sub);
-      margin-top: 4px;
+      margin-top: 6px;
     }
 
     .results-container {
@@ -237,23 +241,21 @@
     .sentence-header {
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
-      gap: 12px;
-      margin-bottom: 12px;
+      align-items: center;
+      margin-bottom: 14px;
     }
 
     .sentence-index {
       background-color: #e8f0fe;
       color: var(--primary);
       font-weight: 700;
-      font-size: 14px;
-      padding: 4px 10px;
+      font-size: 15px;
+      padding: 6px 12px;
       border-radius: 8px;
-      display: inline-block;
     }
 
     .btn-listen {
-      background-color: #34a853;
+      background-color: #1e8e3e;
       color: white;
       border: none;
       border-radius: 30px;
@@ -264,74 +266,79 @@
       align-items: center;
       gap: 6px;
       cursor: pointer;
-      box-shadow: 0 2px 6px rgba(52,168,83,0.3);
-      transition: transform 0.1s, background-color 0.2s;
-    }
-
-    .btn-listen:active {
-      transform: scale(0.97);
-      background-color: #2d9249;
+      box-shadow: 0 2px 6px rgba(30,142,62,0.3);
     }
 
     .btn-listen.playing {
-      background-color: #ea4335;
+      background-color: #d93025;
     }
 
     .original-text {
-      font-size: 22px;
+      font-size: 24px;
       font-weight: 700;
       color: #111;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
       line-height: 1.4;
     }
 
     .chunked-text {
-      font-size: 19px;
+      font-size: 20px;
       color: var(--primary);
       font-weight: 600;
       margin-bottom: 16px;
       background: #f1f3f4;
-      padding: 10px 14px;
+      padding: 12px 16px;
       border-radius: 10px;
-      letter-spacing: 0.5px;
+      line-height: 1.5;
     }
 
     .chunked-label {
       font-size: 13px;
       color: var(--text-sub);
       margin-bottom: 4px;
-      font-weight: normal;
       display: block;
     }
 
     .detail-row {
-      margin-top: 12px;
-      padding-top: 12px;
+      margin-top: 14px;
+      padding-top: 14px;
       border-top: 1px dashed var(--border);
     }
 
     .detail-title {
-      font-size: 14px;
+      font-size: 15px;
       color: var(--text-sub);
-      margin-bottom: 4px;
+      margin-bottom: 6px;
+      font-weight: 600;
     }
 
     .pronunciation-box {
-      font-size: 20px;
+      font-size: 22px;
       font-weight: 700;
       color: #b05a00;
       background: #fef7e0;
-      padding: 8px 14px;
+      padding: 10px 16px;
       border-radius: 8px;
       display: inline-block;
-      margin-bottom: 8px;
+      line-height: 1.4;
     }
 
     .korean-box {
-      font-size: 19px;
+      font-size: 20px;
       color: #202124;
       font-weight: 600;
       line-height: 1.5;
+    }
+
+    .error-card {
+      background-color: #fce8e6;
+      border: 2px solid var(--error);
+      color: #c5221f;
+      padding: 20px;
+      border-radius: var(--radius);
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 1.6;
     }
 
     .modal-overlay {
@@ -351,7 +358,6 @@
       padding: 24px;
       max-width: 500px;
       width: 100%;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
     }
 
     .modal h2 {
@@ -363,10 +369,9 @@
       width: 100%;
       padding: 12px;
       font-size: 16px;
-      border: 1px solid var(--border);
+      border: 2px solid var(--border);
       border-radius: 8px;
-      margin-top: 8px;
-      margin-bottom: 16px;
+      margin: 10px 0 16px;
     }
 
     .modal-buttons {
@@ -384,17 +389,18 @@
   </header>
 
   <main>
-    <div class="notice-card">
-      💡 <b>부모님을 위한 안심 영어 도우미</b><br>
-      영어 문장을 직접 입력하거나 사진을 올리면 <b>또박또박한 한글 발음</b>과 <b>느린 원어민 음성</b>을 들려드립니다.
+    <div class="banner-warning" id="keyWarningBanner" onclick="openSettings()" style="cursor:pointer;">
+      ⚠️ <b>API 키가 아직 저장되지 않았습니다!</b><br>
+      여기를 터치하여 Gemini API 키를 입력해 주세요.
     </div>
 
     <div class="input-card">
-      <div class="input-title">✍️ 영어 문장이나 단어 입력</div>
-      <textarea id="englishInput" placeholder="여기에 영어 문장을 입력하거나 사진을 올려주세요."></textarea>
+      <div class="input-title">✍️ 영어 문장이나 사진 올리기</div>
+      <textarea id="englishInput" placeholder="영어 문장을 직접 입력하거나, 아래 [사진 촬영] 버튼을 눌러보세요."></textarea>
 
-      <div class="image-preview-container" id="previewContainer">
+      <div class="image-preview-box" id="previewContainer">
         <img id="imagePreview" class="image-preview" src="" alt="사진 미리보기">
+        <div class="preview-info" id="previewInfo">✅ 사진이 준비되었습니다.</div>
         <button class="btn-remove-image" onclick="clearImage()">✕</button>
       </div>
 
@@ -408,7 +414,7 @@
         <button class="btn btn-secondary" onclick="document.getElementById('galleryInput').click()">
           🖼️ 앨범 선택
         </button>
-        <button class="btn btn-primary" onclick="analyzeEnglish()">
+        <button class="btn btn-primary" id="btnAnalyze" onclick="analyzeEnglish()">
           🔍 또박또박 분석하기
         </button>
       </div>
@@ -416,8 +422,8 @@
 
     <div class="loading-state" id="loadingState">
       <div class="spinner"></div>
-      <div class="loading-text">선생님이 친절하게 분석하고 있습니다...</div>
-      <div class="loading-subtext">발음과 한국어 해석을 준비하는 중입니다.</div>
+      <div class="loading-text">선생님이 분석하고 있습니다...</div>
+      <div class="loading-subtext">발음과 한국어 해석을 준비하는 중입니다. (약 3~5초)</div>
     </div>
 
     <div class="results-container" id="resultsContainer"></div>
@@ -426,27 +432,35 @@
   <div class="modal-overlay" id="settingsModal">
     <div class="modal">
       <h2>⚙️ Gemini API 키 설정</h2>
-      <p style="font-size:14px; color:var(--text-sub);">
-        Google AI Studio에서 발급받은 무료 API 키를 입력해 두시면 브라우저에 안전하게 저장됩니다.
+      <p style="font-size:15px; color:var(--text-sub);">
+        Google AI Studio에서 발급받은 API 키를 붙여넣어 주세요. (기기에 자동 저장됩니다)
       </p>
       <input type="password" id="apiKeyInput" placeholder="AIzaSy...">
       <div class="modal-buttons">
-        <button class="btn btn-secondary" style="padding:10px 16px; font-size:15px;" onclick="closeSettings()">닫기</button>
-        <button class="btn btn-primary" style="padding:10px 16px; font-size:15px; grid-column:auto;" onclick="saveApiKey()">저장하기</button>
+        <button class="btn btn-secondary" style="padding:10px 18px; font-size:16px;" onclick="closeSettings()">닫기</button>
+        <button class="btn btn-primary" style="padding:10px 18px; font-size:16px; grid-column:auto;" onclick="saveApiKey()">저장하기</button>
       </div>
     </div>
   </div>
 
   <script>
     let selectedImageBase64 = null;
-    let selectedImageMime = '';
+    let selectedImageMime = 'image/jpeg';
 
     window.addEventListener('DOMContentLoaded', () => {
-      const savedKey = localStorage.getItem('gemini_api_key');
-      if (savedKey) {
-        document.getElementById('apiKeyInput').value = savedKey;
-      }
+      checkApiKeyBanner();
     });
+
+    function checkApiKeyBanner() {
+      const savedKey = localStorage.getItem('gemini_api_key');
+      const banner = document.getElementById('keyWarningBanner');
+      if (savedKey && savedKey.trim().length > 10) {
+        banner.style.display = 'none';
+        document.getElementById('apiKeyInput').value = savedKey;
+      } else {
+        banner.style.display = 'block';
+      }
+    }
 
     function openSettings() {
       document.getElementById('settingsModal').style.display = 'flex';
@@ -463,7 +477,8 @@
         return;
       }
       localStorage.setItem('gemini_api_key', key);
-      alert('API 키가 저장되었습니다.');
+      checkApiKeyBanner();
+      alert('API 키가 안전하게 저장되었습니다!');
       closeSettings();
     }
 
@@ -471,13 +486,48 @@
       const file = event.target.files[0];
       if (!file) return;
 
-      selectedImageMime = file.type || 'image/jpeg';
+      const previewContainer = document.getElementById('previewContainer');
+      const previewImg = document.getElementById('imagePreview');
+      const previewInfo = document.getElementById('previewInfo');
+      
+      previewInfo.innerText = "⏳ 사진 최적화 중입니다...";
+      previewContainer.style.display = 'block';
+
       const reader = new FileReader();
       reader.onload = function(e) {
-        const fullBase64 = e.target.result;
-        selectedImageBase64 = fullBase64.split(',')[1];
-        document.getElementById('imagePreview').src = fullBase64;
-        document.getElementById('previewContainer').style.display = 'block';
+        const img = new Image();
+        img.onload = function() {
+          const MAX_WIDTH = 1024;
+          const MAX_HEIGHT = 1024;
+          let width = img.width;
+          let height = img.height;
+
+          if (width > height) {
+            if (width > MAX_WIDTH) {
+              height = Math.round((height * MAX_WIDTH) / width);
+              width = MAX_WIDTH;
+            }
+          } else {
+            if (height > MAX_HEIGHT) {
+              width = Math.round((width * MAX_HEIGHT) / height);
+              height = MAX_HEIGHT;
+            }
+          }
+
+          const canvas = document.createElement('canvas');
+          canvas.width = width;
+          canvas.height = height;
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0, width, height);
+
+          const compressedDataUrl = canvas.toDataURL('image/jpeg', 0.75);
+          selectedImageBase64 = compressedDataUrl.split(',')[1];
+          selectedImageMime = 'image/jpeg';
+
+          previewImg.src = compressedDataUrl;
+          previewInfo.innerText = "✅ 사진이 준비되었습니다! 아래 [또박또박 분석하기]를 눌러주세요.";
+        };
+        img.src = e.target.result;
       };
       reader.readAsDataURL(file);
     }
@@ -492,7 +542,7 @@
 
     function speakText(text, btnElement) {
       if (!('speechSynthesis' in window)) {
-        alert('이 브라우저에서는 음성 듣기가 지원되지 않습니다.');
+        alert('이 기기에서는 음성 듣기가 지원되지 않습니다.');
         return;
       }
 
@@ -541,121 +591,138 @@
       window.speechSynthesis.speak(utterance);
     }
 
- 비동기 기능. 영어 분석() {
- const apiKey = localStorage.getItem(- "원문": 표준 영어 문장);
- const textInput = document.getElementById('EnglishInput').가치.trim();
+    async function analyzeEnglish() {
+      const apiKey = localStorage.getItem('gemini_api_key');
+      const textInput = document.getElementById('englishInput').value.trim();
+      const resultsContainer = document.getElementById('resultsContainer');
+      const loading = document.getElementById('loadingState');
+      const btnAnalyze = document.getElementById('btnAnalyze');
 
- 만약 (!apiKey) {
- alert('먼저 우측 상단 [⚙️ 설정]을 눌러 Gemini API 키를 등록해주세요.');
- 오픈 설정();
- 반환;
+      if (!apiKey || apiKey.trim().length < 10) {
+        openSettings();
+        return;
       }
 
- 만약 (!textInput & &!selectedImageBase64) {
- alert('영어 문장을 입력하거나 사진을 올려주세요.');
- 반환;
+      if (!textInput && !selectedImageBase64) {
+        alert('영어 문장을 입력하거나 사진을 먼저 찍어주세요.');
+        return;
       }
 
- const loading = document.getElementById('loadingState');
- const resultsContainer = document.getElementById('resultsContainer');
- loading.style.display = '차단';
- 결과 컨테이너.innerHTML = '';
+      loading.style.display = 'block';
+      resultsContainer.innerHTML = '';
+      btnAnalyze.disabled = true;
+      btnAnalyze.innerText = '⏳ 분석 중...';
 
- const systemPrompt = '당신은 한국 시니어 학습자를 전문으로 가르치는 미국 영어 교육자입니다.
-제공된 영어 입력(텍스트 또는 사진)을 분석합니다. 텍스트를 명확하고 개별적인 문장으로 세분화합니다.
-각 객체가 있는 JSON 배열을 출력합니다:
-- "원문": 표준 영어 문장
-- "정크": 자연스러운 호흡 정지를 위해 슬래시로 나누어져 있습니다
-- "발음": 방송인/아나운서 발음을 위한 명확한 한국어 음성 가이드
-- "한국어": 정중하고 자연스러운 한국어 번역
-- "팁": 한국어의 짧은 뉘앙스/발음 팁(선택 사항)
-원시 유효 JSON 배열만 출력합니다.`
+      const systemPrompt = `You are an American English educator specializing in teaching Korean senior learners.
+Analyze the provided English input (from text or recognized from photo).
+Break down the text into clear, individual sentences.
+Output a JSON array where each object has:
+- "original": Standard English sentence
+- "chunked": Divided with slashes for natural breathing pause (e.g. Good morning, / everyone.)
+- "pronunciation": Clear Korean phonetic guide for broadcaster/announcer articulation
+- "korean": Polite, natural Korean translation easy for elderly learners
+- "tip": Short nuance/pronunciation tip in Korean (optional)
+Output ONLY raw valid JSON array. No markdown code blocks.`;
 
- 구성 요소 = [];
- if (textInput) parts.push({text: '영어 입력: ${textInput}' });
- 한다면 (선택된 ImageBase64) {
- 부품.push({
- 인라인데이터: {마임}유형: selectedImageMime, 데이터: selectedImageBase64 }
- });
- parts.push({텍스트: "이 이미지에서 영어를 인식하고 분석하세요." });
- }
+      const parts = [];
+      if (textInput) {
+        parts.push({ text: `English text to analyze: ${textInput}` });
+      }
+      if (selectedImageBase64) {
+        parts.push({
+          inlineData: {
+            mimeType: selectedImageMime,
+            data: selectedImageBase64
+          }
+        });
+        parts.push({ text: "Please recognize all English text in this image, translate and transcribe it." });
+      }
 
- 해라 {
- const response = wait fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=$ {apiKey}', {
- 방법: 'POST',
- 헤더: { '콘텐츠 유형': '애플리케이션/json'},
- 본문: JSON.stringify({
- 시스템지침: {파트: [텍스트: systemPrompt }]},
- 내용: [{파트}],
- generationConfig: {
- 온도: 0.2,
- responseMimeType: "응용 프로그램/json"
- }
- })
- });
+      try {
+        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            systemInstruction: { parts: [{ text: systemPrompt }] },
+            contents: [{ parts: parts }],
+            generationConfig: {
+              temperature: 0.2,
+              responseMimeType: "application/json"
+            }
+          })
+        });
 
- 만약 (!response.ok) {
- consterrData = wait 응답.json ();
- 새 오류(errData.error?메시지 || 'API 요청 실패';
- }
+        if (!response.ok) {
+          const errData = await response.json().catch(() => ({}));
+          throw new Error(errData.error?.message || `통신 오류 (코드: ${response.status})`);
+        }
 
- const 데이터 = 응답 대기.json ();
- rawText = data.candidates?[0]내용부품?[0]텍스트;
- 만약 (!rawText)가 새로운 오류('응답 데이터가 없습니다')를 던진다면;
+        const data = await response.json();
+        let rawText = data.candidates?.[0]?.content?.parts?.[0]?.text;
+        if (!rawText) throw new Error('AI 분석 결과를 가져오지 못했습니다.');
 
- rawText = rawText.replace(/'json/g, '''.replace(/''/g, ''').trim();
- 구문 문장 = JSON.parse(rawText);
+        rawText = rawText.replace(/```json/g, '').replace(/```/g, '').trim();
+        const sentences = JSON.parse(rawText);
 
- 결과(문장) 렌더링;
- } 또 만나 (오류) {
- 경고 ('오류 발생: ' + err.message);
- } 마침내. {
- loading.style.display = 'none';
- }
- }
+        renderResults(sentences);
+      } catch (err) {
+        console.error(err);
+        resultsContainer.innerHTML = `
+          <div class="error-card">
+            ⚠️ <b>분석 실패 안내</b><br>
+            ${err.message}<br><br>
+            <small style="color:#555;">💡 팁: 우측 상단 [⚙️ 설정]에서 API 키가 올바르게 입력되었는지 확인해 주세요.</small>
+          </div>
+        `;
+      } finally {
+        loading.style.display = 'none';
+        btnAnalyze.disabled = false;
+        btnAnalyze.innerText = '🔍 또박또박 분석하기';
+      }
+    }
 
- 기능. 결과 렌더링(문장들) {
- const container = document.getElementById('결과 컨테이너');
- 컨테이너.innerHTML = '';
+    function renderResults(sentences) {
+      const container = document.getElementById('resultsContainer');
+      container.innerHTML = '';
 
- 만약 (!Array.isArray(문장) || 문장 길이 === 0) {
- 컨테이너.innerHTML = '<div class="sentence 카드">인식된 영어 문장이 없습니다.</div>';
- 반환;
- }
+      if (!Array.isArray(sentences) || sentences.length === 0) {
+        container.innerHTML = '<div class="sentence-card">인식된 영어 문장이 없습니다. 다시 촬영해 주세요.</div>';
+        return;
+      }
 
- 문장.각 ((항목, idx)) => {
- const card = document.createElement('div');
- card.className = 'sentence 카드';
- const originalSafe = (item.original || ''.replace(/'/g, "\\\');
+      sentences.forEach((item, idx) => {
+        const card = document.createElement('div');
+        card.className = 'sentence-card';
+        const originalSafe = (item.original || '').replace(/'/g, "\\'");
 
- 카드.innerHTML = '
- <div class="sentence-header">
- <span class="sentence-index">문장 ${idx + 1}</span>
- <버튼 클래스="btn-청취" 클릭="SpeakText('${오리지널 세이프}, 이)">
- 🔊 천천히 듣기
- </버튼>
- </div>
- <div class="원문-텍스트">${item.original || ''}/div>
- <div class="chunk ed-text">
- <span class="chunk ed-label">✂️ 숨 쉬며 끊어 읽기</span>
- ${항목}.청크 || ''
- </div>
- <div class="detail 행">
- <div class="detail-title">🗣️ 또박또박 한글 발음</div>
- <div class="발음 상자">${item.발음 || ''}/div>
- </div>
- <div class="detail 행">
- <div class="detail-title">🇰🇷 우리말 뜻</div>
- <div class="한국 상자">${항목.한국어 || ''}/div>
- </div>
- ${item.tip?}
- <div class="detail 행" 스타일="배경:#fafa; 패딩:10 px 12 px; 테두리-radius:8 px; 여백-위:10 px;">
- <div style="font 사이즈:14 px; 색상:#555;">💡 <b> 선생님 조언://b> ${item.tip}/div>
- </div>: ''
- `;
- container.appendChild(카드);
- });
- }
- </대본>
-</몸>
-</HTML>
+        card.innerHTML = `
+          <div class="sentence-header">
+            <span class="sentence-index">문장 ${idx + 1}</span>
+            <button class="btn-listen" onclick="speakText('${originalSafe}', this)">
+              🔊 천천히 듣기
+            </button>
+          </div>
+          <div class="original-text">${item.original || ''}</div>
+          <div class="chunked-text">
+            <span class="chunked-label">✂️ 숨 쉬며 끊어 읽기</span>
+            ${item.chunked || ''}
+          </div>
+          <div class="detail-row">
+            <div class="detail-title">🗣️ 또박또박 한글 발음</div>
+            <div class="pronunciation-box">${item.pronunciation || ''}</div>
+          </div>
+          <div class="detail-row">
+            <div class="detail-title">🇰🇷 우리말 뜻</div>
+            <div class="korean-box">${item.korean || ''}</div>
+          </div>
+          ${item.tip ? `
+          <div class="detail-row" style="background:#fafafa; padding:10px 12px; border-radius:8px; margin-top:10px;">
+            <div style="font-size:14px; color:#555;">💡 <b>선생님 조언:</b> ${item.tip}</div>
+          </div>` : ''}
+        `;
+        container.appendChild(card);
+      });
+    }
+  </script>
+</body>
+</html>
